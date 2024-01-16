@@ -32,6 +32,10 @@ public class VariableExe4 {
 		System.out.println(isTrue);
 		isTrue = m1 == m2;
 		System.out.println(isTrue);
+		
+		byte a = 10;
+		int b =  a; // a에 int가 생략된거라고 봄. 
+		
 	} // end of main
 	
 	public static boolean update(int arg) {
