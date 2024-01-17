@@ -3,9 +3,9 @@ package com.yedam.condition;
 public class ArrayExe {
 	public static void main(String[] args) {
 		int[] intAry = {10, 20, 30}; // 자바에서는 배열은 중괄호{}
-		intAry[2] = 40;
+		intAry[2] = 40; // 배열번호 2번위치의 값을 40으로 선언
 		
-		intAry = new int[]{10,20,30,40,50}; // 새로 담을경우 새로 선언해야함.
+		intAry = new int[]{10,20,30,40,50}; // 새로 담을경우 새로 선언해야함.{}에 담긴 배열을 선언
 		intAry = new int[10]; // 10개의 공간을 가진 배열 생성
 		System.out.println(intAry[0]+", 크기:" + intAry.length);
 		intAry[0] = 100;
