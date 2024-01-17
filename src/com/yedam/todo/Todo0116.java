@@ -18,6 +18,18 @@ public class Todo0116 {
 			input = scn.nextLine();
 		}
 		System.out.println("<<end of prog>>");
+//		
+//		while(true) {
+//
+//			System.out.println("값을 입력>>> ");
+//			String input = scn.nextLine();
+//			if(input.equals("quit")) {
+//				break;
+//			}else {
+//			System.out.println("입력값은 %s입니다.", input);
+//			}
+//			
+//		}
 		
 	}
 }
