@@ -22,10 +22,23 @@ public class FriendExe {
 				case 1 : 
 					System.out.println("이름을 입력하세요");
 					String name = scn.nextLine();
+					while(name == "") {
+						System.out.println("이름은 반드시 입력해야합니다. 이름을 입력해주세요.");
+						name = scn.nextLine();
+					}
 					System.out.println("몸무게를 입력하세요");
-					double weight = Double.parseDouble(scn.nextLine());
+					Double weight = 0.0;
+					String inw=scn.nextLine();
+					if(inw != "") {
+						weight = Double.parseDouble(inw); 
+					}
+					
 					System.out.println("점수를 입력하세요");
-					int score = Integer.parseInt(scn.nextLine());
+					int score = 0;
+					String ins = scn.nextLine();
+					if(inw != "") {
+						score = Integer.parseInt(ins); 
+					}
 					cntf++;
 					Friend friend = new Friend();
 					friend.name = name;

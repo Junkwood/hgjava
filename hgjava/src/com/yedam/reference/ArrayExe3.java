@@ -44,16 +44,16 @@ public class ArrayExe3 {
 		System.out.println("변경점수입력>>");
 		int fscore = Integer.parseInt(scn.nextLine());
 		
-		int fidx = -1 ;
+		boolean isTrue = false ;
 		
 		for(int i = 0; i < friends.length; i++) {
 			if(friends[i] != null && friends[i].name.equals(fname)) {
 				friends[i].score = fscore;
-				fidx=i;
-				System.out.printf("%s의 점수가 %d 점으로 변경되었습니다.",friends[fidx].name,friends[fidx].score);
+				isTrue = true;
+				System.out.printf("%s의 점수가 %d 점으로 변경되었습니다.",friends[i].name,friends[i].score);
 			}
 		}
-		if(fidx == -1) {
+		if(!isTrue) {
 			System.out.println(fname+"님은 목록에 없습니다.");
 		}
 //		else {
