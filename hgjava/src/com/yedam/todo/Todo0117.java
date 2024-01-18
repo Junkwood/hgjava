@@ -8,12 +8,14 @@ public class Todo0117 {
 		//친구3명의 이름과 연락처를 입력하도록..메시지출력
 		//입력완료
 		
-		String[] frdAry;
-		frdAry = new String[100];
+		System.out.println("사람수");
+		int in = Integer.parseInt(scn.nextLine());
+	
+		String[] frdAry = new String[in*2];
+		
+//		String[] frdAry = new String[100];
 		
 		int cnt = 0;
-		
-		
 		
 		
 		while(true) {
@@ -34,10 +36,14 @@ public class Todo0117 {
 					System.out.printf("이름 : %s\n연락처 : %s\n====================",frdAry[i],frdAry[i+1]);
 				}
 				break;
-			}else {
+			}
+			if(cnt<in*2-2){
 				frdAry[cnt]  = name;
 				frdAry[cnt+1] = tel;
 				cnt += 2;				
+			}else {
+				System.out.println("모두 입력하셨습니다.(총"+ in +"명)");
+				break;
 			}
 			
 		}
