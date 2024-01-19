@@ -54,12 +54,17 @@ public class FriendExe {
 					break;
 				case 2 : //전체목록 확인
 					System.out.println("========== 전체 목록 ==========");
+					int cntn = 0;
 					for(int i=0;i<friends.length; i++) {
 						if(friends[i] != null) {
 							System.out.printf("\n이름: %s, 몸무게:%.1f, 점수: %d", friends[i].name,friends[i].weight,friends[i].score);
+							cntn++;
 						}
 					}
-					System.out.println("\n===========================");
+					if(cntn == 0) {
+						System.out.printf("      친구 목록이 비었습니다.");
+					}
+					System.out.println("\n=============================");
 					break;
 				case 3 : //수정
 					System.out.println("수정할 친구 번호를 입력하세요");
