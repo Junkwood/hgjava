@@ -6,7 +6,9 @@ public class StudentApp {
 	private static Student[] students;//초기값은 null
 	
 	//생성자
-	static {students = new Student[10];}
+	static {
+		students = new Student[10];
+	}
 	//메소드.
 	//등록
 	public static boolean add(Student std) {

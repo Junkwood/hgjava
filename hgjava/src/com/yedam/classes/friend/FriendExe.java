@@ -2,7 +2,7 @@ package com.yedam.classes.friend;
 
 import java.util.Scanner;
 
-public class FirendExe {
+public class FriendExe {
 	static Scanner scn = new Scanner(System.in);
 	static FriendApp app = new FriendApp();
 	static UserApp uapp = new UserApp();

@@ -9,7 +9,9 @@ public class Student {
 	private String sname;
 	private int score; // 초기값 0
 	private double height; // 초기값 0.0
+	private boolean onSchool;
 	
+
 	//생성자 : 없을 경우 기본생성자가 부여됨.new Friend()  반환값이 없음. 있으면 기본생성자도 없음.
 	public Student(){
 		
@@ -34,7 +36,7 @@ public class Student {
 	}
 
 	//메소드
-	void showInfo() {
+	public void showInfo() {
 		System.out.printf("번호는 %s, 이름은 %s, 점수는 %d점입니다.(키:%.1fcm)\n",this.sno,this.sname,this.score,height);//this는 안넣어도 this있는것으로 간주하긴 함.
 	}
 	String showInfoStr() {
@@ -71,4 +73,11 @@ public class Student {
 		this.sname = sname;
 	}
 
+	public boolean isOnSchool() {
+		return onSchool;
+	}
+	
+	public void setOnSchool(boolean onSchool) {
+		this.onSchool = onSchool;
+	}
 }
