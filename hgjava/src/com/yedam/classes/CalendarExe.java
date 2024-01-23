@@ -20,12 +20,44 @@ public class CalendarExe {
 		//2024-10-5
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyy-MM-dd");
 		try {
-		date = sdf.parse("2024-01-01");//String->date
+		date = sdf.parse("2024-03-01");//String->date
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println(date.getMonth());
 		
+		drawCalendar(date);
+		
+	}
+	static void drawCalendar(Date date) {
+		
+		Calendar cal = Calendar.getInstance();
+		int year = date.getYear()+1900;
+		int month = date.getMonth();
+		cal.set(year, month, 1); // 연,월,일 설정이나 날짜는1의 위치를 알기위해 1로 고정.
+		int pos=cal.get(Calendar.DAY_OF_WEEK)-1;
+		int lastDate=cal.getActualMaximum(Calendar.DATE);
+		System.out.printf("======== %d년 %d월 =========\n",year,month+1);
+		//요일출력
+		String[] days = {"Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat"};
+		for(int i=0; i<days.length; i++) {
+			System.out.printf("%4s",days[i]);
+		}
+		System.out.println();
+		// 공란출력
+		for(int i = 0; i< pos; i++) {
+			if(pos == 7) {
+				continue;
+				}
+		System.out.printf("%4s","");
+		}
+		//날짜 출력
+		for(int d=1; d<=lastDate; d++) {
+			System.out.printf("%4d",d);
+			if((pos+d)%7==0) {
+				System.out.println();
+			}
+		}
 	}
 	static void drawCalendar(int year, int month) {
 		// (2024, 1)
