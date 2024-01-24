@@ -19,13 +19,12 @@ public class CalendarExe {
 		Date date = new Date();
 		//2024-10-5
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyy-MM-dd");
-		try {
-		date = sdf.parse("2024-02-01");//String->date
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+
+		date = sdf.parse("2024-03-01");//String->date
 		drawCalendar(date);
-	}
+		}
+
+	
 	
 	//date = sdf.parse("2024-01-01");에서 연,월 바꾸면 해당 월 달력이 출력되도록 해보기. 숙제!
 	static void drawCalendar(Date date) {

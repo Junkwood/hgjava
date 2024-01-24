@@ -11,7 +11,12 @@ public class RuntimeExe {
 		}
 		
 		//실행예외.
-		String str = "ten";
+		String str = null;
+		try {
+		System.out.println(str.toString());
+		}catch(NullPointerException e) {
+			System.out.println("참조값 없음.");
+		}
 		try {
 		int num = Integer.parseInt(str);
 		System.out.println(num);
