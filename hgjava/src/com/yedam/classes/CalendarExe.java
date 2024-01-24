@@ -1,5 +1,6 @@
 package com.yedam.classes;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,8 +21,13 @@ public class CalendarExe {
 		//2024-10-5
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyy-MM-dd");
 
-		date = sdf.parse("2024-03-01");//String->date
+		try {
+			date = sdf.parse("2024-03-01");//String->date
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		drawCalendar(date);
+		
 		}
 
 	

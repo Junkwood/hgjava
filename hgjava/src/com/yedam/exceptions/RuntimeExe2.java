@@ -5,17 +5,24 @@ public class RuntimeExe2 {
 		
 		
 		//실행예외
-		String str = "10";
+		String str = "ten";
 		
 		str = null;
 		
 		try {
-		System.out.println(str.toString());//NullPointer
-		int num = Integer.parseInt(str);//NumberFormat
+			str="ten";
+			System.out.println(str.toString());//NullPointer
+			int num = Integer.parseInt(str);//NumberFormat
 		} catch(NullPointerException ne) {
-			ne.printStackTrace();
+//			ne.printStackTrace();
+			System.out.println("참조값없음");
 		} catch(NumberFormatException ne2) {
-			ne2.printStackTrace();
+//			ne2.printStackTrace();
+			System.out.println("숫자값이 아님");
+		}catch(Exception e) {
+			System.out.println("알수 없는 예외.");
 		}
+		
+		System.out.println("end of prog.");
 	}
 }

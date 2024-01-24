@@ -12,13 +12,24 @@ public class FriendExe {
 		
 		while(run) {
 			System.out.println("1.등록 2.조회 3.수정 4.삭제 9.종료");
-			int menu = Integer.parseInt(scn.nextLine());
-			
+			int menu=0;
+			try {
+			menu = Integer.parseInt(scn.nextLine());
+			}catch (NumberFormatException ne) {
+				System.out.println("숫자를 입력하세요");
+			}
 			switch(menu) {
 			case 1 ://등록 1)이름연락처 2)학교친구 3)회사친구
 				System.out.println("1.친구 2.회사. 3.학교 ");
-				int subMenu = Integer.parseInt(scn.nextLine());
-				
+				int subMenu=0;
+				while(true) {
+				try {
+					subMenu = Integer.parseInt(scn.nextLine());
+					break;
+				}catch (NumberFormatException ne) {
+					System.out.println("숫자를 입력하세요");
+					}
+				}
 				System.out.print("이름>>>");
 				String name = scn.nextLine();
 				System.out.print("연락처>>>");
@@ -102,6 +113,7 @@ public class FriendExe {
 				break;
 			case 4 : // 삭제
 				System.out.print("삭제할 번호");
+				
 				fno = scn.nextLine();
 				if(app.remove(fno)) {
 					System.out.print("삭제완료");
