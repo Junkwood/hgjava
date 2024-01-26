@@ -6,7 +6,7 @@ import java.awt.Toolkit;
 public class BeepPrintExe {
 	public static void main(String[] args) {
 		
-//		Thread thread = new Thread(new BeepTask());
+//		Thread thread = new Thread(new BeepTask());//Runnable 인터페이스를 구현한 클래스를 통해서 멀티쓰레드.
 		Thread thread = new BeepThread();
 		thread.start();//start 호출하면 run() 메소드 실행
 		
